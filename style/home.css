@@ -1,0 +1,51 @@
+.home-our-mission-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap; 
+    padding: 20px;
+}
+
+
+.text_content {
+    flex: 1 1 300px;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    color: var(--primary);
+}
+
+.text_content > h2 {
+    font-size: 2.5rem;
+}
+
+.text_content hr {
+    width: 100px;
+    border: 5px solid var(--secondary);
+}
+
+.text_content a {
+    color: var(--secondary);
+}
+
+.text_content a:hover {
+    text-decoration: underline;
+}
+
+
+.video_content {
+    flex: 1 1 300px;
+    aspect-ratio: 16 / 9;
+    border-radius: 30px;
+    overflow: hidden;
+    max-width: 600px;
+    margin: auto;
+}
+
+.video_content iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
