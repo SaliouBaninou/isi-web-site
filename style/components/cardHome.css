@@ -1,0 +1,102 @@
+.card-home-infos {
+    background-color: var(--primary);
+    width: 230px;
+    max-width: 100%;
+    height: 316px;
+    max-height: 100%;
+    transition: background-color 0.3s ease;
+}
+
+/* Image de la carte */
+.card-home-image {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.card-home-image > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Contenu textuel */
+.card-home-text {
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.card-home-text > h3 {
+    color: var(--bg-color);
+}
+
+.card-home-text > p {
+    color: var(--gray-text);
+}
+
+.card-home-text > hr {
+    border: 2px solid var(--danger-text);
+    width: 50px;
+}
+
+/* Effet hover */
+.card-home-infos:hover {
+    background-color: var(--secondary);
+}
+
+.card-home-infos:hover > .card-home-text > p,
+.card-home-infos:hover > .card-home-text > h3 {
+    color: var(--primary) !important;
+}
+
+.card-home-infos:hover > .card-home-text > hr {
+    border: 2px solid var(--primary);
+}
+
+/* Responsive : tablettes */
+@media (max-width: 768px) {
+    .card-home-infos {
+        width: 200px;
+        height: auto;
+    }
+
+    .card-home-text {
+        padding: 15px 25px;
+    }
+
+    .card-home-text > h3 {
+        font-size: 1.2rem;
+    }
+
+    .card-home-text > p {
+        font-size: 0.95rem;
+    }
+}
+
+/* Responsive : téléphones */
+@media (max-width: 480px) {
+    .card-home-infos {
+        width: 95%; /* Prend presque toute la largeur */
+        height: auto;
+    }
+
+    .card-home-text {
+        padding: 15px 20px;
+    }
+
+    .card-home-text > h3 {
+        font-size: 1.1rem;
+        text-align: center;
+    }
+
+    .card-home-text > p {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    .card-home-text > hr {
+        margin: 0 auto;
+    }
+}
