@@ -1,0 +1,112 @@
+.carousel-container-home {
+    margin-top: 70px;
+    padding: 0 1rem;
+}
+
+.carousel-item-div {
+    background-color: var(--primary);
+    width: 100%;
+    max-width: 240px;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.carousel-image {
+    object-fit: cover;
+    border-bottom: 2px solid var(--secondary);
+    width: 100%;
+    height: auto;
+}
+
+.carousel-item-text-content {
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex-grow: 1;
+}
+
+.carousel-item-avis {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.carousel-item-avis > span:first-child {
+    color: var(--secondary);
+    font-weight: bold;
+}
+
+.carousel-item-note {
+    min-width: 60px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--bg-color);
+    color: var(--primary);
+    padding: 2px 10px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: .8rem;
+    gap: 5px;
+}
+
+.carousel-item-avis svg {
+    color: var(--primary);
+    width: 15px;
+    height: 15px;
+}
+
+.carousel-item-title {
+    color: var(--bg-color);
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.carousel-item-description {
+    color: var(--gray-text);
+    font-size: 0.875rem;
+    line-height: 1.4;
+}
+
+.carousel-item-text-content a {
+    border: 2px solid var(--secondary);
+    font-weight: bold;
+    color: var(--secondary);
+    width: max-content;
+    padding: 10px 20px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.875rem;
+    transition: all 0.3s ease;
+}
+
+.carousel-item-text-content a:hover {
+    color: var(--primary);
+    background-color: var(--secondary);
+}
+
+
+
+
+@media (max-width: 768px) {
+    .carousel-item-text-content {
+        padding: 10px 15px;
+        gap: 10px;
+    }
+
+    .carousel-item-title {
+        font-size: 0.9rem;
+    }
+
+    .carousel-item-description {
+        font-size: 0.8rem;
+    }
+}

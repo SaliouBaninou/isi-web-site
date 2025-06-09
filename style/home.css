@@ -82,6 +82,9 @@
 
 /* Responsive pour tablettes */
 @media (max-width: 768px) {
+    .infos-cards-infos{
+        margin-bottom: 80px;
+    }
     .infos-text_content > h2 {
         font-size: 2rem;
     }
@@ -95,12 +98,10 @@
 @media (max-width: 480px) {
     .infos-text_content > h2 {
         font-size: 1.8rem;
-        text-align: center;
     }
 
     .infos-text_content > h5 {
         font-size: 1rem;
-        text-align: center;
     }
 
     .infos-cards-infos {

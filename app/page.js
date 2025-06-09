@@ -2,6 +2,7 @@ import NavHeader from "@/components/vitrine/Header";
 import Link from "next/link";
 import '@/style/home.css'
 import CardHomeInfos from "@/components/vitrine/CardHomeInfos";
+import HomeCaroussel from "@/components/vitrine/HomeCaroussel";
 
 export const metadata = {
   title: 'ISI | Accueil',
@@ -10,6 +11,50 @@ export const metadata = {
 
 
 export default function HomePage(){
+  const carouselData =[
+    {
+      title: "Remise de diplome",
+      description: "Remise de diplome à l'institut supérieur d'ingénierie",
+      id: 1,
+      image: '/diplome_image.jpg',
+      note: 4.5
+    },
+    {
+      title: "Update site ISI",
+      description: "La 2eme d’informatique d’ISI ferrons le site de l'école ",
+      id: 2,
+      image: '/iformatique_image.jpg',
+      note: 4.5
+    },
+    {
+      title: "Remise de diplome",
+      description: "Remise de diplome à l'institut supérieur d'ingénierie",
+      id: 3,
+      image: '/diplome_image.jpg',
+      note: 4.5
+    },
+    {
+      title: "Update site ISI",
+      description: "La 2eme d’informatique d’ISI ferrons le site de l'école ",
+      id: 4,
+      image: '/iformatique_image.jpg',
+      note: 4.5
+    },
+    {
+      title: "Remise de diplome",
+      description: "Remise de diplome à l'institut supérieur d'ingénierie",
+      id: 5,
+      image: '/diplome_image.jpg',
+      note: 4.5
+    },
+    {
+      title: "Update site ISI",
+      description: "La 2eme d’informatique d’ISI ferrons le site de l'école ",
+      id: 6,
+      image: '/iformatique_image.jpg',
+      note: 4.5
+    }
+  ]
   return (
     <>
       <NavHeader/>
@@ -40,6 +85,17 @@ export default function HomePage(){
           <CardHomeInfos title="Diplome" description="Diplome de l'institut de la compétence" image="/card_etudiant_etranger.jpg"/>
           <CardHomeInfos title="Etudiant étranger" description="ISI accueil aussi les étudiants étrangers" image="/card_presentation.jpg"/>
         </div>
+      </section>
+      <section className="home-actuality">
+        <div className="infos-text_content">
+          <h5>Dernière actualités</h5>
+          <h2>ISI l{"'"}Institut de la compétence !</h2>
+          <p>
+            Consultez les différentes dernière actualités.
+            L’institut de la compétente vous présent
+          </p>
+        </div>
+        <HomeCaroussel data={carouselData}/>
       </section>
     </>
   )
