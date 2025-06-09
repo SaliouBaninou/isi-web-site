@@ -1,0 +1,90 @@
+.accordeon-message {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 20px 30px;
+    color: var(--primary);
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/* Ligne décorative */
+.accordeon-message > hr {
+    border: none;
+    border-top: 5px solid var(--secondary);
+    width: 200px;
+}
+
+/* Titre */
+.accordeon-message > h2 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+}
+
+/* Paragraphe masqué avec animation */
+.accordeon-message > p {
+    max-height: 59px;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+
+/* Paragraphe visible */
+.accordeon-message > p.active {
+    max-height: 500px; /* Valeur arbitraire haute */
+}
+
+/* Bouton toggle */
+.accordeon-message > button {
+    width: max-content;
+    border: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+    color: var(--secondary);
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.accordeon-message > button:hover,
+.accordeon-message > button:active {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .accordeon-message {
+        padding: 15px 20px;
+        gap: 30px;
+    }
+
+    .accordeon-message > h2 {
+        font-size: 2rem;
+    }
+
+    .accordeon-message > button {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .accordeon-message {
+        padding: 10px 15px;
+        gap: 25px;
+    }
+
+    .accordeon-message > h2 {
+        font-size: 1.5rem;
+    }
+
+    .accordeon-message > button {
+        font-size: 0.9rem;
+    }
+
+    .accordeon-message > hr {
+        width: 100px;
+    }
+}

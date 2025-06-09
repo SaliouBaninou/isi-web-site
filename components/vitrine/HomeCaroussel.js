@@ -9,20 +9,20 @@ import Link from "next/link";
 
 function HomeCaroussel({ data = [] }) {
     const responsive = {
+        bigDesktop: {
+            breakpoint: { max: 3000, min: 1600 },
+            items: 5,
+        },
         desktop: {
-            breakpoint: { max: 3000, min: 1024 },
+            breakpoint: { max: 1600, min: 1024 },
             items: 4,
         },
         tablet: {
-            breakpoint: { max: 1024, min: 768 },
-            items: 3,
-        },
-        mobile: {
-            breakpoint: { max: 768, min: 425 },
+            breakpoint: { max: 1024, min: 640 },
             items: 2,
         },
-        smallMobile: {
-            breakpoint: { max: 425, min: 0 },
+        mobile: {
+            breakpoint: { max: 640, min: 0 },
             items: 1,
         },
     };

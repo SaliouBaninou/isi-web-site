@@ -3,6 +3,8 @@ import Link from "next/link";
 import '@/style/home.css'
 import CardHomeInfos from "@/components/vitrine/CardHomeInfos";
 import HomeCaroussel from "@/components/vitrine/HomeCaroussel";
+import Image from "next/image";
+import AccordeonMessage from "@/components/vitrine/AccordeonMessage";
 
 export const metadata = {
   title: 'ISI | Accueil',
@@ -96,6 +98,19 @@ export default function HomePage(){
           </p>
         </div>
         <HomeCaroussel data={carouselData}/>
+      </section>
+      <section className="home-model-enseignement">
+        <div className="home-me-content">
+          <div className="me-content-left">
+            <div className="me-content-image">
+              <Image src={'/manequin.png'} height={575} width={445} alt="Image manequin"/>
+            </div>
+            <p>Institut Supérieur d{"'"}Ingénierie</p>
+          </div>
+          <div className="me-content-right">
+            <AccordeonMessage title={"ISI modèle d’enseignement"} message={"En application de la loi N°0021/2011 du 14 février 2012et en reconnaissance de la qualité des formations dispensées par ISI, conjuguée à la dynamique de la recherche scientifique et de l’innovation et de l’excellence de l’infrastructure scientifique et sociale de ISI, la Commission Nationale de Coordination de l’Enseignement Supérieur a donné son avis favorable à la Reconnaissance d’ISI par l’Etat. Ceci implique que les diplômes délivrés par ISI seront tous admis en équivalence avec des diplômes nationaux. Le décret relatif à cette Reconnaissance listera les diplômes d’ISI et leurs équivalents nationaux."}/>
+          </div>
+        </div>
       </section>
     </>
   )
