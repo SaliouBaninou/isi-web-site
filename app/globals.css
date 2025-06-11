@@ -37,16 +37,13 @@ a{
 
 section{
   min-height: 100vh;
-  max-height: 100%;
-  width: 100%;
-}
-
-
-.global-container{
   width: 1440px;
   margin: auto;
   max-width: 100%;
 }
+
+
+
 
 @media screen and (max-height: 1280px) {
   section {

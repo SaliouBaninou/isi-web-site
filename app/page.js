@@ -1,4 +1,3 @@
-import NavHeader from "@/components/vitrine/Header";
 import Link from "next/link";
 import '@/style/home.css'
 import CardHomeInfos from "@/components/vitrine/CardHomeInfos";
@@ -6,6 +5,7 @@ import HomeCaroussel from "@/components/vitrine/HomeCaroussel";
 import Image from "next/image";
 import AccordeonMessage from "@/components/vitrine/AccordeonMessage";
 import NewsLetter from "@/components/vitrine/NewsLetter";
+import PrincipalSection from "@/components/vitrine/PrincipalSection";
 
 export const metadata = {
   title: 'ISI | Accueil',
@@ -60,7 +60,13 @@ export default function HomePage(){
   ]
   return (
     <>
-      <NavHeader/>
+      <PrincipalSection
+        title="Bienvenue !"
+        sousTitle={"C’est 10k+ étudiant former par ISI"}
+        description={"Inscrivez vous dès maintenant sans plus attendre."}
+        link1={{href:'/inscription', title: "S'inscrire"}}
+        link2={{href:'/our-mission', title: "En savoir plus"}}
+        />
       <section className="home-our-mission-section">
           <div className="text_content">
             <hr/>

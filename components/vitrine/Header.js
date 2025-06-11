@@ -37,10 +37,8 @@ function NavHeader() {
                     type='multiple'
                     title="Etablissement"
                     otherLinks={[
-                        { title: "Mot du directeur", href: "/mot-du-directeur" },
-                        { title: "Notre mission", href: "/our-mission" },
-                        { title: "Choisir ISI ?", href: "/choisir-isi" },
-                        { title: "Bacheliers", href: "/bacheliers" }
+                        { title: "Formation Scientifique", href: "/formation-scientifique" },
+                        { title: "Formation Classique", href: "/formation-classique" }
                     ]}
                 />
                 <HeaderLink title="Actualité" href="/actualite" />
