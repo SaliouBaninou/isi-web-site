@@ -1,0 +1,107 @@
+header.nav-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    /* Backdrop avec fallback */
+    -webkit-backdrop-filter: blur(10px); /* Safari */
+    backdrop-filter: blur(10px);
+}
+
+.header-logo {
+    height: 80px;
+    width: 130px;
+}
+
+.header-logo > img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.burger-icon {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--secondary);
+    top: 60px;
+    right: 20px;
+    z-index: 1001;
+}
+
+/* Navigation desktop */
+.header-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Responsive (mobile/tablette) */
+@media (max-width: 768px) {
+    header.nav-header {
+        background-color: var(--bg-color, #fff); /* fallback si var non définie */
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+        z-index: 1000;
+    }
+
+    .burger-icon {
+        display: block;
+        position: absolute;
+        background: none;
+        border: none;
+        color: var(--secondary);
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+
+    .header-links {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        width: 100%;
+        margin-top: 20px;
+        animation: fadeIn 0.3s ease-in-out;
+    }
+
+    .header-links.show {
+        display: flex;
+    }
+
+    .header-multiple-links {
+        width: 100%;
+    }
+
+    .header-multiple-links button {
+        width: 100%;
+        text-align: left;
+    }
+
+    .header-others-links {
+        position: static;
+        background-color: #f0f8ff;
+        width: 100%;
+        border-radius: 0;
+        box-shadow: none;
+        padding-left: 10px;
+    }
+
+    .header-others-links > a {
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(-10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+}

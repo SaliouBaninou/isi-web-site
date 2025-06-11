@@ -1,0 +1,55 @@
+.header-simple-link {
+    color: var(--secondary);
+    font-weight: bold;
+}
+
+.header-simple-link:hover {
+    opacity: .8;
+}
+
+.header-multiple-links {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.header-multiple-links button {
+    border: 0;
+    width: max-content;
+    padding: 0;
+    background-color: transparent;
+    color: var(--secondary);
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.header-others-links {
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: max-content;
+    background-color: aliceblue;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    z-index: 10;
+}
+
+.header-others-links > a {
+    color: var(--bg-color);
+    font-weight: bold;
+    padding: 10px 20px;
+    border-bottom: 2px solid #9747FF;
+    transition: background-color 0.3s ease-in-out;
+    text-decoration: none;
+}
+
+.header-others-links > a:hover {
+    background-color: #9747FF;
+    color: var(--primary);
+}

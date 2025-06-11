@@ -47,3 +47,14 @@ section{
   margin: auto;
   max-width: 100%;
 }
+
+@media screen and (max-height: 1280px) {
+  section {
+    min-height: max-content;
+    margin-bottom: 200px;
+  }
+
+  header{
+    margin-bottom: 100px;
+  }
+}

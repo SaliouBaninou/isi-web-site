@@ -5,6 +5,7 @@ import CardHomeInfos from "@/components/vitrine/CardHomeInfos";
 import HomeCaroussel from "@/components/vitrine/HomeCaroussel";
 import Image from "next/image";
 import AccordeonMessage from "@/components/vitrine/AccordeonMessage";
+import NewsLetter from "@/components/vitrine/NewsLetter";
 
 export const metadata = {
   title: 'ISI | Accueil',
@@ -112,6 +113,7 @@ export default function HomePage(){
           </div>
         </div>
       </section>
+      <NewsLetter/>
     </>
   )
 }
