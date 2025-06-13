@@ -20,13 +20,6 @@ body{
   background-color: var(--bg-color);
 }
 
-header{
-  position: sticky;
-  top: 0;
-  left: 0;
-  z-index: 200;
-}
-
 li{
   list-style: none;
 }
@@ -40,18 +33,13 @@ section{
   width: 1440px;
   margin: auto;
   max-width: 100%;
+  margin-top: 200px;
 }
-
 
 
 
 @media screen and (max-height: 1280px) {
   section {
     min-height: max-content;
-    margin-bottom: 200px;
-  }
-
-  header{
-    margin-bottom: 100px;
   }
 }
