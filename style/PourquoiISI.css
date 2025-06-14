@@ -1,0 +1,76 @@
+.pourquoi-isi-section {
+    width: 100%;
+    padding: 300px 20px;
+    background-color: var(--primary);
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pourquoi-isi-content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 50px;
+    max-width: 1200px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+/* Titre */
+.pourquoi-isi-content h2 {
+    color: var(--bg-color);
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    max-width: 500px;
+}
+
+/* Conteneur accordéons */
+.accordions-pourquoi {
+    width: 600px;
+    max-width: 100%;
+    flex: 1;
+}
+
+@media  screen and (max-width: 1000px) {
+    .pourquoi-isi-content{
+        padding: 20px;
+    }
+    .pourquoi-isi-content h2{
+        width: 300px;
+    }
+}
+
+/* Responsive tablette */
+@media screen and (max-width: 768px) {
+    .pourquoi-isi-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 40px;
+        padding: 0;
+    }
+
+    .pourquoi-isi-content h2 {
+        font-size: 2rem;
+        text-align: center;
+        width: initial;
+    }
+
+    .accordions-pourquoi {
+        width: 100%;
+    }
+}
+
+/* Responsive mobile */
+@media screen and (max-width: 480px) {
+    .pourquoi-isi-section {
+        padding: 60px 15px;
+    }
+
+    .pourquoi-isi-content h2 {
+        font-size: 1.6rem;
+    }
+}

@@ -1,4 +1,4 @@
-.news-letter-div{
+.news-letter-div {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -8,28 +8,29 @@
     color: var(--primary);
     margin-bottom: 50px;
     padding: 0 40px;
-} 
-
-.news-letter-div > h5{
-    color: var(--secondary);
-}
-
-.news-letter-div > h2{
-    font-size: 2.5rem;
-}
-
-.news-letter-div > p{
     text-align: center;
 }
 
-.news-letter-div > form{
-    width: max-content;
-    max-width: 100%
+.news-letter-div > h5 {
+    color: var(--secondary);
 }
 
-.form-group-newsletter{
-    width: 690px;
-    max-width: 100%;
+.news-letter-div > h2 {
+    font-size: 2.5rem;
+}
+
+.news-letter-div > p {
+    text-align: center;
+    max-width: 800px;
+}
+
+.news-letter-div > form {
+    width: 100%;
+    max-width: 690px;
+}
+
+.form-group-newsletter {
+    width: 100%;
     height: 60px;
     background-color: var(--primary);
     display: flex;
@@ -40,18 +41,18 @@
     margin-top: 50px;
 }
 
-.form-group-newsletter > input{
-    flex:1;
+.form-group-newsletter > input {
+    flex: 1;
     height: 100%;
     border: none;
     outline: none;
     padding: 0 20px;
     color: var(--secondary);
     font-size: 1rem;
+    background: transparent;
 }
 
-
-.form-group-newsletter > button{
+.form-group-newsletter > button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -59,11 +60,49 @@
     height: 100%;
     border: none;
     color: var(--primary);
-    font-size: .9rem;
+    font-size: 0.9rem;
     padding: 0 20px;
     cursor: pointer;
+    transition: opacity 0.3s ease;
 }
 
-.form-group-newsletter > button:hover{
-    opacity: .8;
+.form-group-newsletter > button:hover {
+    opacity: 0.8;
+}
+
+/* Responsive tablette */
+@media screen and (max-width: 768px) {
+    .news-letter-div {
+        padding: 0 20px;
+    }
+
+    .news-letter-div > h2 {
+        font-size: 2rem;
+    }
+}
+
+/* Responsive mobile */
+@media screen and (max-width: 500px) {
+    .form-group-newsletter {
+        flex-direction: column;
+        height: 90px;
+    }
+
+    .form-group-newsletter > input,
+    .form-group-newsletter > button {
+        width: 100%;
+        height: 40px;
+        font-size: .9rem;
+    }
+
+    .form-group-newsletter > button {
+        border-top: 1px solid var(--secondary);
+    }
+}
+
+/* Extra small devices */
+@media screen and (max-width: 400px) {
+    .news-letter-div {
+        padding: 20px 10px;
+    }
 }

@@ -10,6 +10,10 @@
     box-sizing: border-box;
 }
 
+.accordeon-message.secondary{
+    color: var(--bg-color);
+}
+
 /* Ligne décorative */
 .accordeon-message > hr {
     border: none;

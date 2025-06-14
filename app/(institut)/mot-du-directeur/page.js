@@ -1,6 +1,10 @@
 import PrincipalSection from "@/components/vitrine/PrincipalSection";
 import Image from "next/image";
 import '@/style/motDuDirecteur.css';
+export const metadata = {
+    title: 'ISI | Mot du directeur',
+    description: '...',
+}
 
 export default function PageMotDuDirecteur(){
     return (
