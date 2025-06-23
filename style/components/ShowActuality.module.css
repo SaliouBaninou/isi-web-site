@@ -37,6 +37,7 @@
 .header > h5 {
     font-size: 1.2rem;
     font-weight: 500;
+    color: var(--bg-color);
 }
 
 .slider {
@@ -107,6 +108,18 @@
 
     .cardContent > h3 {
         font-size: 1.1rem;
+    }
+
+    .header{
+        width: 100%;
+    }
+
+    .header > h2 {
+        font-size: 2rem;
+    }
+
+    .header > h5{
+        font-size: 1rem;
     }
 
     .dateLink {
