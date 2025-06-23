@@ -1,0 +1,130 @@
+.card{
+    background-color: var(--primary);
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: var(--bg-color);
+    box-shadow: rgba(14, 63, 126, 0.06) 0px 0px 0px 1px, rgba(42, 51, 70, 0.03) 0px 1px 1px -0.5px, rgba(42, 51, 70, 0.04) 0px 2px 2px -1px, rgba(42, 51, 70, 0.04) 0px 3px 3px -1.5px, rgba(42, 51, 70, 0.03) 0px 5px 5px -2.5px, rgba(42, 51, 70, 0.03) 0px 10px 10px -5px, rgba(42, 51, 70, 0.03) 0px 24px 24px -8px;
+    border-bottom: 7px solid transparent;
+}
+
+
+.borderColor1 {
+    border-bottom-color: #26335D;
+}
+.borderColor2 {
+    border-bottom-color: #B99B3C;
+}
+.borderColor3 {
+    border-bottom-color: #6DA2CA;
+}
+.borderColor4 {
+    border-bottom-color: #5c0088;
+}
+.borderColor5 {
+    border-bottom-color: #8D5CF6;
+}
+
+
+.cardImage {
+    width: 100%;
+    height: 235px;
+}
+
+.cardImage > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cardContent {
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cardContent > h3 {
+    color: var(--bg-color);
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.dateLink{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.dateLink > a{
+    color: var(--secondary);
+    border: 2px solid var(--secondary);
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+.dateLink > a:hover{
+    background-color: var(--secondary);
+    color: var(--primary);
+}
+
+.dateLink > div{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.8rem;
+    color:var(--gray-text);
+}
+
+@media screen and (max-width: 1024px) {
+    .cardContent {
+        gap: 15px;
+        padding: 12px 16px;
+    }
+
+    .cardContent > h3 {
+        font-size: 1.2rem;
+    }
+
+    .dateLink > a {
+        padding: 8px 16px;
+        font-size: 0.85rem;
+    }
+
+    .dateLink > div {
+        font-size: 0.75rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .card {
+        width: 100%;
+        height: 400px;
+        border-radius: 10px;
+    }
+
+    .cardImage {
+        flex: 1;
+    }
+
+    .cardContent > h3 {
+        font-size: 1.1rem;
+    }
+
+    .dateLink {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .dateLink > a {
+        width: 100%;
+        text-align: center;
+    }
+}

@@ -1,0 +1,128 @@
+.section {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    align-items: center;
+    padding: 0 160px;
+    background-color: var(--primary);
+    width: 100%;
+    margin-top: 0;
+    padding-top: 200px;
+    min-height: 100vh;
+}
+
+.header {
+    width: max-content;
+    color: var(--primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 80px;
+    text-align: center;
+}
+
+.header > p {
+    color: var(--secondary);
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.header > h2 {
+    font-size: 3rem;
+    line-height: 1.1;
+    color: var(--bg-color);
+}
+
+.header > h5 {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.slider {
+    width: 100%;
+    margin-bottom: 80px;
+}
+
+.carouselContainer {
+    min-height: 450px;
+}
+
+@media screen and (max-width: 1024px) {
+    .card {
+        width: 100%;
+        height: auto;
+        padding: 10px; /* Ajouté pour un léger espacement autour de la carte */
+    }
+
+    .cardImage {
+        height: 200px;
+    }
+
+    .cardContent {
+        padding: 16px;
+        gap: 15px;
+    }
+
+    .cardContent > h3 {
+        font-size: 1.2rem;
+    }
+
+    .dateLink > a {
+        padding: 8px 16px;
+        font-size: 0.85rem;
+    }
+
+    .dateLink > div {
+        font-size: 0.75rem;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .section{
+        padding: 100px 60px 0 60px;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .section {
+        padding: 100px 30px 0 30px;
+    }
+    .card {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        padding: 8px;
+    }
+
+    .cardImage {
+        height: 180px;
+    }
+
+    .cardContent {
+        padding: 14px;
+        gap: 12px;
+    }
+
+    .cardContent > h3 {
+        font-size: 1.1rem;
+    }
+
+    .dateLink {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .dateLink > a {
+        width: 100%;
+        text-align: center;
+        font-size: 0.85rem;
+        padding: 8px 14px;
+    }
+
+    .dateLink > div {
+        font-size: 0.75rem;
+    }
+}
