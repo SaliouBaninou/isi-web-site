@@ -1,0 +1,99 @@
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    width: 250px;
+    background-color: #081028;
+    padding: 20px;
+    color: #fff;
+    position: fixed;
+    border: 1px solid #33334d;
+}
+
+.logo {
+    height: 60px;
+    width: 90px;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.logo > img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.adminInfo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: 1px solid #33334d;
+    padding: 12px 10px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.infos{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.name {
+    font-size: .9rem;
+    font-weight: bold;
+}
+
+.status{
+    font-size: .8rem;
+    color: #999;
+}
+
+.nav {
+    flex-grow: 1;
+}
+
+.navItem {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 12px;
+    padding: 10px 15px;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: color 0.3s;
+    background: transparent;
+    font-size: 0.95rem;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.navItem.active{
+    color: rgba(14, 67, 251, 0.96);
+}
+
+
+.icon {
+    font-size: 1.2rem;
+}
+
+.logout {
+    margin-top: auto;
+}
+
+.logout > button{
+    border: none;
+    outline: none;
+    color: #F04248;
+}

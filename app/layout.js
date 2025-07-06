@@ -1,6 +1,5 @@
 import {Montserrat} from 'next/font/google'
 import "./globals.css";
-import NavHeader from '@/components/vitrine/Header';
 
 const montserrat = Montserrat({
   subsets: ['latin'],       
@@ -18,7 +17,6 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${montserrat.className}`}>
         <div className='global-container'>
-          <NavHeader/>
           {children}
         </div>
       </body>

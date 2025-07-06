@@ -6,6 +6,7 @@ import Image from "next/image";
 import AccordeonMessage from "@/components/vitrine/AccordeonMessage";
 import NewsLetter from "@/components/vitrine/NewsLetter";
 import PrincipalSection from "@/components/vitrine/PrincipalSection";
+import NavHeader from "@/components/vitrine/Header";
 
 export const metadata = {
   title: 'ISI | Accueil',
@@ -60,6 +61,7 @@ export default function HomePage(){
   ]
   return (
     <>
+      <NavHeader/>
       <PrincipalSection
         title="Bienvenue !"
         sousTitle={"C’est 10k+ étudiant former par ISI"}

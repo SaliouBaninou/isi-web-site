@@ -1,0 +1,145 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../app/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+
+enum Role {
+  USER
+  ADMIN
+  SUPER_ADMIN
+}
+
+enum FormationCategory {
+  SCIENTIFIQUE
+  LITTERAIRE
+}
+
+enum TypeDemande {
+  PREINSCRIPTION
+  INSCRIPTION
+}
+
+enum StatutDemande {
+  EN_ATTENTE
+  ACCEPTEE
+  REJETEE
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique @db.VarChar(255)
+  password  String?
+  name      String   @db.VarChar(100)
+  role      Role     @default(USER)
+  articles  Article[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Article {
+  id          String   @id @default(cuid())
+  title       String   @db.VarChar(250)
+  description String   // Contenu Markdown
+  imageUrl    String
+  note        Int?
+  publishedAt DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  authorId    String
+  author      User     @relation(fields: [authorId], references: [id])
+}
+
+model Formation {
+  id          String   @id @default(cuid())
+  title       String   @db.VarChar(250)
+  description String   // Contenu Markdown
+  category    FormationCategory
+  imageUrl    String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  Preinscription Preinscription[]
+}
+
+model Preinscription {
+  id                  String     @id @default(cuid())
+  nom                 String     @db.VarChar(100)
+  prenom              String     @db.VarChar(100)
+  dateNaissance       DateTime
+  lieuNaissance       String     @db.VarChar(150)
+  genre               String     @db.VarChar(10)
+  email               String     @db.VarChar(255)
+  telephone           String     @db.VarChar(30)
+  adresse             String
+  serieBac            String
+
+  formationId         String
+  formation           Formation  @relation(fields: [formationId], references: [id])
+  typeDemande         TypeDemande
+  statut              StatutDemande @default(EN_ATTENTE)
+
+  // Infos famille
+  nomGeniteur         String
+  prenomGeniteur      String
+  emailGeniteur       String     @db.VarChar(255)
+  professionGeniteur  String
+  telephoneGeniteur   String     @db.VarChar(30)
+
+  nomGenitrice        String
+  prenomGenitrice     String
+  emailGenitrice      String     @db.VarChar(255)
+  professionGenitrice String
+  telephoneGenitrice  String     @db.VarChar(30)
+
+  nomGarant           String
+  prenomGarant        String
+  emailGarant         String     @db.VarChar(255)
+  professionGarant    String
+  telephoneGarant     String     @db.VarChar(30)
+
+  boursier            Boolean
+
+  // Pièces justificatives (URLs vers fichiers)
+  acteNaissance         String
+  demiCartePhoto        String
+  carteIdentite         String
+  attestationScolarite  String
+  bulletinsTerminale    String?
+
+  createdAt           DateTime @default(now())
+  updatedAt           DateTime @updatedAt
+}
+
+model DemandeEmploi {
+  id               String   @id @default(cuid())
+  nom              String   @db.VarChar(100)
+  prenom           String   @db.VarChar(100)
+  dateNaissance    DateTime
+  lieuNaissance    String   @db.VarChar(150)
+  genre            String   @db.VarChar(10)
+  email            String   @db.VarChar(255)
+  telephone        String   @db.VarChar(30)
+  adresse          String
+
+  // Pièces justificatives (URLs vers fichiers)
+  acteNaissance    String
+  demiCartePhoto   String
+  passport         String
+  diplome          String
+  cv               String
+
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+}
