@@ -1,0 +1,58 @@
+.cardStat{
+    width: 300px;
+    height: 120px;
+    border: 1px solid #343B4F;
+    background-color: #0B1739;
+    padding: 15px 30px;
+    border-radius: 10px;
+    color: var(--primary);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.header{
+    color: #AEB9E1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header > h4{
+    font-size: .9rem;
+}
+
+.content{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.value{
+    font-size: 2rem;
+}
+
+.btnTaux{
+    background-color: #9747FF;
+    font-size: .8rem;
+    display: flex;
+    align-items: center;
+    padding: 15px 10px;
+    gap: 5px;
+    height: 10px;
+    border-radius: 10px;
+}
+.btnTaux.hausse {
+    background-color: rgba(20, 202, 116, 0.15);
+    color: #14CA74;
+    border: 1px solid rgba(20, 202, 116, 0.18);
+}
+
+/* En baisse */
+.btnTaux.baisse {
+    background-color: rgba(255, 72, 72, 0.15);
+    color: #FF4848;
+    border: 1px solid rgba(255, 72, 72, 0.18);
+}

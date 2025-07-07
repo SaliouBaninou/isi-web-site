@@ -1,0 +1,38 @@
+.content {
+    width: 100%;
+    max-width: 1330px;
+    margin: auto;
+}
+
+
+.headerDashboard{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.leftHeader{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.leftHeader h2{
+    font-size: 1.5rem;
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.leftHeader p{
+    color:#AEB9E1;
+    font-size: .9rem;
+}
+
+.cardsStats{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 20px;
+    margin-top: 50px;
+}
