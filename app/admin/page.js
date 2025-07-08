@@ -1,9 +1,13 @@
 "use client";
-
 import { useState } from "react";
 import Image from "next/image";
 import styles from "@/style/admin/login.module.css";
 import { FiMail, FiLock, FiEye, FiEyeOff } from "react-icons/fi";
+
+export const metadata = {
+    title: "Admin | Connexion",
+    description: "Page de connexion",
+};
 
 export default function Page() {
     const [showPassword, setShowPassword] = useState(false);

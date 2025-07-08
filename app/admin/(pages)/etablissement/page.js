@@ -1,23 +1,37 @@
-import styles from '@/style/admin/dashboard.module.css'
+import styles from "@/style/admin/etablissement.module.css";
 import StatCard from "@/components/admin/StatCard";
 import {FaEye, FaRegBell, FaUser, FaUserPlus} from "react-icons/fa";
 import {formatNumber} from "@/utilis/Calculs";
+import Link from "next/link";
+
+const links = [
+    {
+        title: 'Nos formations',
+        href: '/admin/etablissement/formations'
+    },
+    {
+        title: 'Nos contacts',
+        href: '/admin/etablissement/contacts'
+    },
+    {
+        title: 'Préinscriptions accordées',
+        href: '/admin/etablissement/pre-inscriptions'
+    },
+    {
+        title: 'Abonnés ISI',
+        href: '/admin/etablissement/abonnes'
+    }
+]
 
 export const metadata = {
-    title: 'ISI | Dashboard',
+    title: 'ISI | Etablissement',
     description: '...',
 }
 
-export default  function Dashboard(){
+export default function Etablissement(){
     return (
         <>
             <div className={styles.content}>
-                <div className={styles.headerDashboard}>
-                    <div className={styles.leftHeader}>
-                        <h2>Bienvenue Monsieur SALIOU</h2>
-                        <p>Gérez eet ou consulté les activités de la plateforme ISI/IDEA</p>
-                    </div>
-                </div>
                 <div className={styles.cardsStats}>
                     <StatCard
                         icon={<FaEye/>}
@@ -51,6 +65,14 @@ export default  function Dashboard(){
                         newData={5000}
                     />
 
+                </div>
+
+                <div className={styles.linksDiv}>
+                    {
+                        links.map((link, index) => (
+                            <Link href={link.href} key={index}>{link.title}</Link>
+                        ))
+                    }
                 </div>
             </div>
         </>

@@ -35,7 +35,7 @@ export default function AdminSideBar() {
                             key={`admin-link-${index}`}
                             href={link.href}
                             className={clsx(styles.navItem, {
-                                [styles.active]: pathname === link.href,
+                                [styles.active]: pathname === link.href || pathname.startsWith(`${link.href}/`),
                             })}
                         >
                             {link.icon}
